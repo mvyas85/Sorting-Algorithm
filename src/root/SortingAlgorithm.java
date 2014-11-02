@@ -69,7 +69,17 @@ public class SortingAlgorithm {
 		System.out.println("Total Time to Bubble Sort is "+ (stopTime-startTime));
 		return array;
 	}
-	
+	public void selectionSort(){
+		int min;
+		for(int i=0; i<nElems-1; i++) // outer loop
+		{
+			min = i; // minimum
+			for(j=i+1; j<nElems; j++) // inner loop
+			if(a[j] < a[min] ) // if min greater,
+				min = j; // we have a new min
+			swap(i, min); // swap them
+		} 
+	}
 	 private static void mergesort(int low, int high) {
 		    // check if low is smaller then high, if not then the array is sorted
 		    if (low < high) {
